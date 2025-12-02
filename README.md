@@ -33,5 +33,34 @@ Skillsets Demonstrated:
     Cloud deployment & scaling (AWS Elastic Beanstalk).
 
     Systems design & distributed architecture.
+⚙️ How the Project Works
 
+    Multi-container architecture:
+
+        Express container → Acts as the backend server, handling API requests and business logic.
+
+        React container → Provides the frontend client, serving the user interface.
+
+        Worker container → Handles background tasks (e.g., queue processing, async jobs).
+
+        Nginx container → Serves as a reverse proxy, routing traffic between client and server, and handling load balancing.
+
+    Databases & caching:
+
+        Postgres → Relational database for structured app data (users, transactions, etc.).
+
+        Redis → In-memory store for caching, session management, or message queues.
+
+    Docker Compose: Defines all containers, their relationships, and networking in a single YAML file. This makes it easy to spin up the entire stack locally or in staging.
+
+    CI/CD pipeline:
+
+        Travis CI → Automates testing and builds. Every commit triggers checks to ensure code quality.
+
+        AWS Elastic Beanstalk → Manages deployment of the Dockerized app in the cloud.
+
+        Dockerrun.aws.json → Configuration file that tells Elastic Beanstalk how to run the multi-container setup.
+
+
+        
 Impact: Delivered a scalable, cloud-hosted application showcasing end-to-end ownership — from coding and containerization to automated testing and deployment. Demonstrated ability to build resilient, production-ready systems in a startup-style environment.
